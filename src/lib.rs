@@ -14,6 +14,7 @@ extern {
 }
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, rust-wasm-game-of-life!");
+pub fn greet(name: &str) {
+    let alert_message = format!("Hey, {}!", name);
+    alert(&alert_message);
 }
